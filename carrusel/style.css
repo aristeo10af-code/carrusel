@@ -1,0 +1,88 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(129, 129, 129);
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; font-family: 'Press Start 2P', cursive; color: white;
+}
+
+.carrusel-retro {
+    width: 90%; max-width: 700px; text-align: center;
+}
+
+.titulo-arcade {
+    font-size: 16px; color: orange; text-shadow: 3px 3px red; margin-bottom: 20px;
+}
+
+.monitor {
+    position: relative; width: 100%; height: 400px;
+    border: 12px solid #222; border-radius: 20px;
+    overflow: hidden; background: #000;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.scanlines {
+    position: absolute; top: 0; z-index: 5;
+    width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+    background-size: 100% 4px; pointer-events: none;
+}
+
+/* Flechas de Navegación */
+.nav-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255, 0, 255, 0.4); border: none;
+    color: white; font-size: 24px; padding: 15px 10px;
+    cursor: pointer; z-index: 10; transition: 0.3s;
+    font-family: serif;
+}
+.nav-arrow:hover { background: #00ffff; color: black; }
+.prev { left: 0; border-radius: 0 10px 10px 0; }
+.next { right: 0; border-radius: 10px 0 0 10px; }
+
+.pantallas-wrapper {
+    display: flex; width: 500%; height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.pantalla {
+    width: 20%; height: 100%;
+    position: relative; display: flex;
+    justify-content: center; align-items: flex-end;
+    padding-bottom: 40px;
+}
+
+.bg-image {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; filter: brightness(0.6);
+}
+
+.info {
+    position: relative; z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px; border: 2px solid #ff00ff;
+    max-width: 80%;
+}
+
+.info h2 { font-size: 12px; color: #ffff00; margin-bottom: 8px; }
+.info p { font-size: 8px; margin-bottom: 5px; }
+.score { font-size: 8px; color: #00ff00; }
+
+/* Botones Arcade */
+.controles-arcade {
+    margin-top: 25px; display: flex; justify-content: center; gap: 20px;
+}
+
+.boton-arcade {
+    width: 35px; height: 35px; background: #444;
+    border-radius: 50%; cursor: pointer;
+    border: 3px solid #111; box-shadow: 0 4px 0 #000;
+    transition: 0.2s;
+}
+
+.boton-arcade.activo {
+    background: #ff0000; box-shadow: 0 0 15px #ffee00; transform: scale(1.1);
+}

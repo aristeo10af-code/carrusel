@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videojuegos retro Carrusel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carrusel-retro">
+        <h1 class="titulo-arcade">INSERTE MONEDA</h1>
+        
+        <div class="monitor">
+            <div class="scanlines"></div>
+            
+            <button class="nav-arrow prev" id="prevBtn">&#10094;</button>
+            <button class="nav-arrow next" id="nextBtn">&#10095;</button>
++
+            <div class="pantallas-wrapper" id="wrapper">
+                <div class="pantalla">
+                    <img src="pac-man.png" alt="Pacman" class="bg-image">
+                    <div class="info">
+                        <h2>PAC-MAN</h2>
+                        <p>1980 - NAMCO</p>
+                        <span class="score">PUNTAJE ALTO: 3333360</span>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="dk.png" alt="Donkey Kong" class="bg-image">
+                    <div class="info">
+                        <h2>DONKEY KONG</h2>
+                        <p>1981 - NINTENDO</p>
+                        <span class="score">PUNTAJE ALTO: 5822486</span>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="blinx.jpg" alt="Blinx" class="bg-image">
+                    <div class="info">
+                        <h2>Blinx 2</h2>
+                        <p>2003 - Xbox</p>
+                        <span class="score">PUNTAJE ALTO: 999999</span>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="bt3.jpg" alt="DBZ" class="bg-image">
+                    <div class="info">
+                        <h2>DBZ: BT3</h2>
+                        <p>2002 - PS2</p>
+                        <span class="score">PUNTAJE ALTO: 5822486</span>
+                    </div>
+                </div>
+                <div class="pantalla">
+                    <img src="kof.jpg" alt="KOF" class="bg-image">
+                    <div class="info">
+                        <h2>KOF</h2>
+                        <p>1985 - NEOGEO</p>
+                        <span class="score">PUNTAJE ALTO: 999999</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controles-arcade">
+            <div class="boton-arcade activo" data-index="0"></div>
+            <div class="boton-arcade" data-index="1"></div>
+            <div class="boton-arcade" data-index="2"></div>
+            <div class="boton-arcade" data-index="3"></div>
+            <div class="boton-arcade" data-index="4"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
